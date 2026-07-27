@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import PageHero from "@/src/components/PageHero";
 
 interface LeaderCard {
@@ -48,43 +49,43 @@ const PAST_LEADERS: LeaderCard[] = [
   {
     name: "Paramjit Kaur Narang",
     role: "Head of School (2001 - 2002)",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=400&auto=format&fit=crop",
+    image: "/narang.jpg",
     details: ["Head of School: 2001 - 2002", "Head of Senior School: 2000 - 2001", "Head of Junior School: 1993 - 2000"],
   },
   {
     name: "Peilu Oberoi",
     role: "Principal (2000 - 2006)",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop",
+    image: "/Peilu-Oberoi-1.jpg",
     details: ["Principal: 2000 - 2006", "Head of Junior School: 2000 - 2006"],
   },
   {
     name: "Rekha Bakshi",
     role: "Head of Junior School",
-    image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=400&auto=format&fit=crop",
+    image: "/Rekha-Bakshi-1.jpg",
     details: ["Head of Junior School: 2006 – 2019"],
   },
   {
     name: "Abha Ranjan",
     role: "Head of Special Section",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop",
+    image: "/abha.jpg",
     details: ["Head of Special Section: 1997 - 2002"],
   },
   {
     name: "Shalini Dave",
     role: "Head of Special Section",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop",
+    image: "/Shalini-Dave-1.jpg",
     details: ["Head of Special Section: 2002 – 2012"],
   },
   {
     name: "Sushmita Mitra",
     role: "Head of Special Section",
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=400&auto=format&fit=crop",
+    image: "/Sushmita-Mitra-1.jpg",
     details: ["Head of Special Section: 2012 – 2022"],
   },
   {
     name: "Rekha Krishnan",
     role: "Principal (2006 - March 2025)",
-    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=400&auto=format&fit=crop",
+    image: "/Rekha-Krishnan.jpeg",
     details: ["Principal: 2006 - March 2025"],
   },
 ];
@@ -93,22 +94,22 @@ const CURRENT_LEADERSHIP = [
   {
     name: "Sharmila Bakshi",
     role: "Principal",
-    icon: "🎓",
+    icon: "/sharmila.jpg",
   },
   {
     name: "Vijay Trivedi",
     role: "Head of Senior School",
-    icon: "🏛️",
+    icon: "/vijay_trivedi_2-scaled.jpeg",
   },
   {
     name: "Mona Datta",
     role: "Head of Junior School",
-    icon: "📚",
+    icon: "/mona-dutta.jpg",
   },
   {
     name: "A. P. John",
     role: "Administrative Head",
-    icon: "💼",
+    icon: "/john.jpg",
   },
 ];
 
@@ -165,11 +166,14 @@ export default function AboutUs() {
 
           <div className="lg:col-span-6 relative">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-stone-900 group">
-              <div className="aspect-[4/3] w-full">
-                <img
+              <div className="relative aspect-[4/3] w-full">
+                <Image
                   src="/about-image.jpg"
                   alt="Vasant Valley School Campus"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  fill
+                  priority
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </div>
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/60 via-transparent to-transparent"></div>
@@ -203,16 +207,18 @@ export default function AboutUs() {
                 className="bg-[#FAF8F5] rounded-2xl p-6 border border-stone-200/70 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between group"
               >
                 <div className="space-y-4">
-                  <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-stone-200">
-                    <img
+                  <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-stone-200 shadow-inner">
+                    <Image
                       src={founder.image}
                       alt={founder.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 25vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent"></div>
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-transparent to-transparent"></div>
                     <div className="absolute bottom-3 left-3 right-3 text-white">
-                      <h3 className="text-base font-bold font-serif">{founder.name}</h3>
-                      <p className="text-[11px] text-amber-300 font-medium">{founder.role}</p>
+                      <h3 className="text-base font-bold font-serif leading-snug">{founder.name}</h3>
+                      <p className="text-[11px] text-amber-300 font-semibold mt-0.5">{founder.role}</p>
                     </div>
                   </div>
 
@@ -244,10 +250,16 @@ export default function AboutUs() {
             {PAST_LEADERS.map((leader, idx) => (
               <div
                 key={idx}
-                className="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition-all duration-200 space-y-3"
+                className="bg-white rounded-2xl p-6 border border-stone-200 shadow-sm hover:shadow-md transition-all duration-200 space-y-4 group"
               >
-                <div className="w-10 h-10 rounded-full bg-red-100 text-[#800000] flex items-center justify-center font-serif font-bold text-sm">
-                  {leader.name.charAt(0)}
+                <div className="relative w-16 h-16 rounded-full overflow-hidden border-2 border-amber-400 shadow-sm shrink-0 bg-stone-100">
+                  <Image
+                    src={leader.image || "/about-image.jpg"}
+                    alt={leader.name}
+                    fill
+                    sizes="64px"
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
                 <div>
@@ -286,10 +298,16 @@ export default function AboutUs() {
             {CURRENT_LEADERSHIP.map((member, idx) => (
               <div
                 key={idx}
-                className="bg-[#FFFDF9] rounded-2xl p-6 border-2 border-amber-200/80 shadow-md text-center space-y-4 hover:border-[#800000] transition-colors duration-300"
+                className="bg-[#FFFDF9] rounded-2xl p-6 border-2 border-amber-200/80 shadow-md text-center space-y-4 hover:border-[#800000] transition-all duration-300 group"
               >
-                <div className="w-16 h-16 mx-auto rounded-full bg-[#800000] text-white flex items-center justify-center text-2xl shadow-md">
-                  {member.icon}
+                <div className="relative w-20 h-20 mx-auto rounded-full overflow-hidden border-2 border-[#800000] shadow-md shrink-0 bg-stone-100">
+                  <Image
+                    src={member.icon}
+                    alt={member.name}
+                    fill
+                    sizes="80px"
+                    className="object-cover group-hover:scale-110 transition-transform duration-300"
+                  />
                 </div>
 
                 <div>
@@ -316,76 +334,27 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="py-16 lg:py-24 bg-[#FAF6F0] border-t border-stone-200/60">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 space-y-12">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-
-            <div className="lg:col-span-6 space-y-6">
-              <span className="text-[#800000] text-xs font-extrabold tracking-widest uppercase">
-                OUR FACULTY
-              </span>
-
-              <h2 className="text-3xl sm:text-4xl font-serif font-bold text-stone-900 leading-tight">
-                Staff & Teacher Enrichment
-              </h2>
-
-              <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
-                Our staff is a diverse group of individuals, with a strong sense of commitment and a passion for learning. There are more than 150 teachers. All staff members are well qualified in their domain areas. We boast of content-creators for the NCERT and the CBSE, advisors to educational organizations, writers, musicians, theatre artists and sportspersons.
-              </p>
-
-              <div className="bg-white p-5 rounded-2xl border-l-4 border-[#800000] shadow-sm space-y-2">
-                <span className="text-[#800000] font-serif italic text-base font-bold block">
-                  &quot;Learning never stops&quot;
-                </span>
-                <p className="text-xs text-stone-600">
-                  This has been the watermark for all staff at Vasant Valley School. The Teacher Enrichment Programme helps teachers access a vast storehouse of skills and knowledge.
-                </p>
-              </div>
-
-              <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
-                Teachers are encouraged to attend courses across the world to understand global best practices. Diverse training modules range from classroom pedagogy, counseling, to Art, Yoga, and Mindfulness.
-              </p>
-            </div>
-
-            <div className="lg:col-span-6 bg-white p-8 sm:p-10 rounded-3xl border border-stone-200 shadow-xl space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center text-xl shadow-md">
-                  🎓
-                </div>
-                <div>
-                  <h3 className="text-xl font-serif font-bold text-stone-900">Alumni Network</h3>
-                  <p className="text-xs text-[#800000] font-bold uppercase">Connected Worldwide</p>
-                </div>
-              </div>
-
-              <p className="text-stone-700 text-xs sm:text-sm leading-relaxed">
-                Since 1999, over 2000 students have graduated from the school and have found their calling all over the world. Their school experience has created bonds that have remained strong.
-              </p>
-
-              <p className="text-stone-600 text-xs sm:text-sm leading-relaxed">
-                Some of our Alumni have become parents and the second generation is already a part of our student body.
-              </p>
-
-              <div className="pt-4 border-t border-stone-100 flex items-center justify-between flex-wrap gap-4">
-                <div>
-                  <span className="text-[11px] text-stone-500 block uppercase font-medium">Contact Alumni Desk</span>
-                  <a
-                    href="mailto:alumni@vasantvalley.edu.in"
-                    className="text-sm font-bold text-[#800000] hover:underline"
-                  >
-                    alumni@vasantvalley.edu.in
-                  </a>
-                </div>
-
-                <a
-                  href="mailto:alumni@vasantvalley.edu.in"
-                  className="bg-[#800000] hover:bg-[#660000] text-white px-5 py-2.5 rounded-full text-xs font-bold tracking-wide transition-all shadow-md"
-                >
-                  Connect with Us
-                </a>
-              </div>
-            </div>
-
+      <section className="bg-[#800000] text-white py-16 lg:py-20 text-center">
+        <div className="max-w-4xl mx-auto px-4 space-y-6">
+          <h2 className="text-3xl sm:text-4xl font-serif font-medium">
+            Join the Vasant Valley Family
+          </h2>
+          <p className="text-stone-200 text-sm sm:text-base font-light max-w-2xl mx-auto">
+            Discover admissions, interactive campus tours, and opportunities to excel at Vasant Valley School.
+          </p>
+          <div className="pt-2 flex flex-wrap justify-center gap-4">
+            <a
+              href="/admissions"
+              className="bg-white text-[#800000] hover:bg-amber-100 px-7 py-3 rounded-full text-xs font-extrabold uppercase tracking-wider shadow-lg transition-all"
+            >
+              Admissions Portal
+            </a>
+            <a
+              href="/contact"
+              className="border border-white/40 hover:border-white text-white px-7 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all"
+            >
+              Connect with Us
+            </a>
           </div>
         </div>
       </section>
