@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import PageHero from "@/src/components/PageHero";
 
 export default function ContactSection() {
   const [formSubmitted, setFormSubmitted] = useState<boolean>(false);
@@ -32,38 +33,15 @@ export default function ContactSection() {
   return (
     <div className="w-full font-sans bg-[#FBF9F5] text-stone-900 selection:bg-[#800000] selection:text-white">
       
-      <section className="relative bg-[#800000] text-white py-20 lg:py-28 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/about-image.jpg"
-            alt="Vasant Valley School Campus"
-            className="w-full h-full object-cover opacity-20 filter brightness-75"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-950/85 via-[#800000]/90 to-[#660000]/85 z-10 pointer-events-none" />
-
-        <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-xs font-semibold uppercase tracking-widest text-amber-300">
-            <span>GET IN TOUCH</span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium tracking-tight leading-tight">
-            Contact Us
-          </h1>
-
-          <p className="text-stone-200 text-sm sm:text-base lg:text-lg max-w-3xl mx-auto font-light leading-relaxed">
-            We are here to assist you with admissions, campus visits, academic inquiries, or general information. Reach out to Vasant Valley School today.
-          </p>
-
-          <div className="pt-2 flex flex-wrap justify-center gap-4 text-xs font-bold uppercase tracking-wider text-amber-200">
-            <span>📍 Vasant Kunj, New Delhi</span>
-            <span>•</span>
-            <span>📞 +91 11 41767940</span>
-            <span>•</span>
-            <span>✉️ info@vasantvalley.edu.in</span>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="GET IN TOUCH"
+        title="Contact Us"
+        description="We are here to assist you with admissions, campus visits, academic inquiries, or general information. Reach out to Vasant Valley School today."
+        backgroundImage="/about-image.jpg"
+        location="Vasant Kunj, New Delhi"
+        phone="+91 11 41767940"
+        email="info@vasantvalley.edu.in"
+      />
 
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 lg:py-20 space-y-16">
         

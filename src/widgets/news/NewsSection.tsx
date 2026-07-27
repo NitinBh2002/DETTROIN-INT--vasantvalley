@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import PageHero from "@/src/components/PageHero";
 
 interface NewsItem {
   id: string;
@@ -132,46 +133,28 @@ export default function NewsSection() {
   return (
     <div className="w-full font-sans bg-[#FBF9F5] text-stone-900 selection:bg-[#800000] selection:text-white">
       
-      <section className="relative bg-[#800000] text-white py-20 lg:py-28 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/about-image.jpg"
-            alt="Vasant Valley Events Background"
-            className="w-full h-full object-cover opacity-20 filter brightness-75"
-          />
+      <PageHero
+        badge="VASANT VALLEY SCHOOL"
+        title="News & Events"
+        description="Discover the latest announcements, achievements, student milestones, and upcoming campus events at Vasant Valley School."
+        backgroundImage="/about-image.jpg"
+      />
+
+      <div className="bg-[#FAF5EE] py-6 border-b border-stone-200">
+        <div className="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-2">
+          {["All", "Achievement", "Academics", "Sports", "Cultural", "Announcement"].map((cat) => (
+            <button
+              key={cat}
+              onClick={() => setSelectedCategory(cat)}
+              className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm ${
+                selectedCategory === cat ? "bg-[#800000] text-white shadow-lg" : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
+              }`}
+            >
+              {cat}
+            </button>
+          ))}
         </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-950/85 via-[#800000]/90 to-[#660000]/85 z-10 pointer-events-none" />
-
-        <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-xs font-semibold uppercase tracking-widest text-amber-300">
-            <span>VASANT VALLEY SCHOOL</span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium tracking-tight leading-tight">
-            News & Events
-          </h1>
-
-          <p className="text-stone-200 text-sm sm:text-base lg:text-lg max-w-3xl mx-auto font-light leading-relaxed">
-            Discover the latest announcements, achievements, student milestones, and upcoming campus events at Vasant Valley School.
-          </p>
-
-          <div className="pt-4 flex flex-wrap justify-center gap-2">
-            {["All", "Achievement", "Academics", "Sports", "Cultural", "Announcement"].map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm ${
-                  selectedCategory === cat
-                    ? "bg-white text-[#800000] shadow-lg scale-105"
-                    : "bg-white/10 text-white hover:bg-white/20"
-                }`}
-              >
-                {cat === "All" ? "All News" : cat}
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+      </div>
 
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 lg:py-20 space-y-16">
         

@@ -1,38 +1,18 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
+import PageHero from "@/src/components/PageHero";
 
 export default function ADayInSchool() {
   return (
     <div className="w-full font-sans bg-[#FBF9F5] text-stone-900 selection:bg-[#800000] selection:text-white">
       
-      <section className="relative w-full h-[320px] sm:h-[420px] lg:h-[500px] overflow-hidden bg-stone-900">
-        <Image
-          src="/a-day-banner.jpg"
-          alt="A Day in Vasant Valley School Banner"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center filter brightness-90"
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/40 to-transparent z-10" />
-
-        <div className="absolute inset-0 z-20 max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 flex flex-col justify-end pb-12 sm:pb-16 text-white space-y-3">
-          <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-xs font-semibold uppercase tracking-widest text-amber-300 w-max">
-            <span>VASANT VALLEY CAMPUS LIFE</span>
-          </div>
-
-          <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-medium tracking-tight leading-tight">
-            A Day in School
-          </h1>
-
-          <p className="text-stone-200 text-xs sm:text-sm lg:text-base max-w-2xl font-light leading-relaxed">
-            An invigorating and dynamic learning experience, both inside and outside the classroom.
-          </p>
-        </div>
-      </section>
+      <PageHero
+        badge="VASANT VALLEY CAMPUS LIFE"
+        title="A Day in School"
+        description="An invigorating and dynamic learning experience, both inside and outside the classroom."
+        backgroundImage="/a-day-banner.jpg"
+      />
 
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 lg:py-20 space-y-16">
         

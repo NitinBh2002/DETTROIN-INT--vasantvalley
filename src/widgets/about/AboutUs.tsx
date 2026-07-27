@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import PageHero from "@/src/components/PageHero";
 
 interface LeaderCard {
   name: string;
@@ -14,25 +15,25 @@ const FOUNDERS = [
   {
     name: "Ms. Rekha Purie",
     role: "Chairperson",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop",
+    image: "/Rekha-Purie-1.jpg",
     bio: "Chairperson of Vasant Valley School. Co-envisioned a learning environment where Arts, Sports, and character building are as vital as academic excellence.",
   },
   {
     name: "Mr. Aroon Purie",
     role: "Co-Founder & Trustee",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop",
+    image: "/Aroon-Purie-2.jpg",
     bio: "Envisioned a paradigm where being a good citizen is more important than being a good student, nurturing independent minds to actualise their unique potential.",
   },
   {
     name: "Mr. Ved Vyas",
     role: "Founder-Principal (Modern School, Vasant Vihar)",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=600&auto=format&fit=crop",
+    image: "/Ved-Vyas-1-1.jpg",
     bio: "Worked closely with Mr. and Mrs. Purie to establish the vision & philosophy. Penmed the lyrics of the School Song 'Shreshtha Tamaya Karmane' (Excellence in Deed).",
   },
   {
     name: "Mr. Arun Kapur",
     role: "First Headmaster (1990 - 2020)",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=600&auto=format&fit=crop",
+    image: "/Arun-Kapur-1.jpg",
     bio: "Appointed first Headmaster in 1990. Led the school for 30 years with the initial group of 16 teachers, building Vasant Valley into a premier co-educational day school in India.",
   },
 ];
@@ -41,41 +42,49 @@ const PAST_LEADERS: LeaderCard[] = [
   {
     name: "Ranu Dattagupta",
     role: "Principal (1998 - 1999)",
+    image: "/ranu.jpg",
     details: ["Principal: 1998 - 1999", "Head of Senior School: 1997 – 1999"],
   },
   {
     name: "Paramjit Kaur Narang",
     role: "Head of School (2001 - 2002)",
+    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=400&auto=format&fit=crop",
     details: ["Head of School: 2001 - 2002", "Head of Senior School: 2000 - 2001", "Head of Junior School: 1993 - 2000"],
   },
   {
     name: "Peilu Oberoi",
     role: "Principal (2000 - 2006)",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop",
     details: ["Principal: 2000 - 2006", "Head of Junior School: 2000 - 2006"],
   },
   {
     name: "Rekha Bakshi",
     role: "Head of Junior School",
+    image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?q=80&w=400&auto=format&fit=crop",
     details: ["Head of Junior School: 2006 – 2019"],
   },
   {
     name: "Abha Ranjan",
     role: "Head of Special Section",
+    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop",
     details: ["Head of Special Section: 1997 - 2002"],
   },
   {
     name: "Shalini Dave",
     role: "Head of Special Section",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop",
     details: ["Head of Special Section: 2002 – 2012"],
   },
   {
     name: "Sushmita Mitra",
     role: "Head of Special Section",
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=400&auto=format&fit=crop",
     details: ["Head of Special Section: 2012 – 2022"],
   },
   {
     name: "Rekha Krishnan",
     role: "Principal (2006 - March 2025)",
+    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=400&auto=format&fit=crop",
     details: ["Principal: 2006 - March 2025"],
   },
 ];
@@ -106,50 +115,15 @@ const CURRENT_LEADERSHIP = [
 export default function AboutUs() {
   return (
     <div className="w-full font-sans bg-[#FBF9F5] text-stone-900 selection:bg-[#800000] selection:text-white">
-      
-      <section className="relative bg-[#800000] text-white py-20 lg:py-28 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/about-image.jpg"
-            alt="Vasant Valley School Building"
-            className="w-full h-full object-cover opacity-25 filter brightness-75"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-950/80 via-[#800000]/90 to-[#660000]/85 z-10 pointer-events-none" />
-        <div className="absolute right-0 top-0 bottom-0 w-96 opacity-10 pointer-events-none flex items-center justify-end overflow-hidden z-10">
-          <div className="w-72 h-72 border-8 border-white rotate-45 transform translate-x-20"></div>
-          <div className="w-48 h-48 border-8 border-white rotate-45 transform translate-x-10"></div>
-        </div>
 
-        <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-xs font-semibold uppercase tracking-widest text-amber-300">
-            <span>ABOUT VASANT VALLEY SCHOOL</span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium tracking-tight leading-tight">
-            Excellence in Deed
-          </h1>
-
-          <p className="text-stone-200 text-sm sm:text-base lg:text-lg max-w-3xl mx-auto font-light leading-relaxed">
-            Run by the Education Today Trust, Vasant Valley School is the realisation of Mr. Aroon Purie and Mrs. Rekha Purie’s vision of the ideal school experience for children.
-          </p>
-
-          <div className="pt-4 flex justify-center gap-4">
-            <a
-              href="#vision"
-              className="bg-white text-[#800000] hover:bg-stone-100 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider shadow-lg transition-all"
-            >
-              Our Vision
-            </a>
-            <a
-              href="#leadership"
-              className="border border-white/40 hover:border-white text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all"
-            >
-              Leadership
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        badge="ABOUT VASANT VALLEY SCHOOL"
+        title="Excellence in Deed"
+        description="Run by the Education Today Trust, Vasant Valley School is the realisation of Mr. Aroon Purie and Mrs. Rekha Purie’s vision of the ideal school experience for children."
+        backgroundImage="/about-image.jpg"
+        primaryButton={{ text: "Our Vision", href: "#vision" }}
+        secondaryButton={{ text: "Leadership", href: "#leadership" }}
+      />
 
       <section id="vision" className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -345,7 +319,7 @@ export default function AboutUs() {
       <section className="py-16 lg:py-24 bg-[#FAF6F0] border-t border-stone-200/60">
         <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 space-y-12">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            
+
             <div className="lg:col-span-6 space-y-6">
               <span className="text-[#800000] text-xs font-extrabold tracking-widest uppercase">
                 OUR FACULTY

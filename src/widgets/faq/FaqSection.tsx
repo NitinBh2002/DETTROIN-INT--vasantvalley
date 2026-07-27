@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import PageHero from "@/src/components/PageHero";
 
 interface FaqItem {
   id: string;
@@ -265,52 +266,35 @@ export default function FaqSection() {
 
   return (
     <div className="w-full font-sans bg-[#FBF9F5] text-stone-900 selection:bg-[#800000] selection:text-white">
-      
-      <section className="relative bg-[#800000] text-white py-20 lg:py-28 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/about-image.jpg"
-            alt="Vasant Valley School Campus"
-            className="w-full h-full object-cover opacity-20 filter brightness-75"
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-r from-stone-950/85 via-[#800000]/90 to-[#660000]/85 z-10 pointer-events-none" />
+      <PageHero
+        badge="HELP & INFORMATION CENTER"
+        title="Frequently Asked Questions"
+        description="Find quick answers to common questions about admissions, board affiliations, subject options, school timings, uniforms, and administrative procedures."
+        backgroundImage="/about-image.jpg"
+      />
 
-        <div className="relative z-20 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full border border-white/20 text-xs font-semibold uppercase tracking-widest text-amber-300">
-            <span>HELP & INFORMATION CENTER</span>
-          </div>
-
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-medium tracking-tight leading-tight">
-            Frequently Asked Questions
-          </h1>
-
-          <p className="text-stone-200 text-sm sm:text-base lg:text-lg max-w-3xl mx-auto font-light leading-relaxed">
-            Find quick answers to common questions about admissions, board affiliations, subject options, school timings, uniforms, and administrative procedures.
-          </p>
-
-          <div className="max-w-xl mx-auto pt-2">
-            <div className="relative flex items-center bg-white rounded-full p-2 shadow-xl border border-white/30">
-              <span className="pl-4 text-stone-400">🔍</span>
-              <input
-                type="text"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                placeholder="Search any question (e.g. uniform, admissions, CBSE, fees)..."
-                className="w-full px-3 py-2 text-xs text-stone-900 placeholder-stone-400 bg-transparent focus:outline-none"
-              />
-              {searchQuery && (
-                <button
-                  onClick={() => setSearchQuery("")}
-                  className="pr-4 text-stone-400 hover:text-stone-700 text-xs font-bold"
-                >
-                  Clear
-                </button>
-              )}
-            </div>
+      <div className="bg-[#FAF5EE] py-6 border-b border-stone-200">
+        <div className="max-w-xl mx-auto px-4">
+          <div className="relative flex items-center bg-white rounded-full p-2 shadow-md border border-stone-200">
+            <span className="pl-4 text-stone-400">🔍</span>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search any question (e.g. uniform, admissions, CBSE, fees)..."
+              className="w-full px-3 py-2 text-xs text-stone-900 placeholder-stone-400 bg-transparent focus:outline-none"
+            />
+            {searchQuery && (
+              <button
+                onClick={() => setSearchQuery("")}
+                className="pr-4 text-stone-400 hover:text-stone-700 text-xs font-bold cursor-pointer"
+              >
+                Clear
+              </button>
+            )}
           </div>
         </div>
-      </section>
+      </div>
 
       <section className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 space-y-12">
         
