@@ -106,7 +106,7 @@ export default function Navbar() {
 
             <div className="h-5 w-[1px] bg-stone-300"></div>
 
-            <Button variant="primary" className="!py-2 !px-5 text-xs">
+            <Button href="/login" variant="primary" className="!py-2 !px-5 text-xs">
               <UserIcon className="w-3.5 h-3.5 text-white/90" />
               <span>Log In</span>
             </Button>
@@ -150,10 +150,14 @@ export default function Navbar() {
           })}
 
           <div className="pt-2">
-            <button className="w-full flex items-center justify-center gap-2 bg-[#800000] text-white py-2.5 rounded-xl text-sm font-semibold shadow-md cursor-pointer">
+            <a
+              href="/login"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="w-full flex items-center justify-center gap-2 bg-[#800000] text-white py-2.5 rounded-xl text-sm font-semibold shadow-md cursor-pointer hover:bg-[#600010] transition-colors"
+            >
               <UserIcon className="w-4 h-4" />
               <span>Log In</span>
-            </button>
+            </a>
           </div>
         </div>
       )}

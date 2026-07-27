@@ -20,48 +20,47 @@ interface HeroSlide {
 const HERO_SLIDES: HeroSlide[] = [
   {
     id: "slide-1",
-    badge: "Excellence in Education",
-    titleLine1: "Laissez",
-    titleHighlight: "lé savoir",
-    subtitle: "Let Knowledge Lead",
+    badge: "Excellence Since 1990",
+    titleLine1: "Let",
+    titleHighlight: "Knowledge Lead",
+    subtitle: "Nurturing Minds. Inspiring Excellence.",
     description:
-      "Nurturing curious minds and confident hearts to shape a better tomorrow through holistic education and moral values.",
-    primaryCtaText: "Discover More",
+      "At Vasant Valley School, we empower students with academic excellence, creativity, compassion, and leadership, preparing them to thrive as responsible global citizens.",
+    primaryCtaText: "Discover Vasant Valley",
     primaryCtaLink: "/about-us",
-    secondaryCtaText: "Virtual Tour",
+    secondaryCtaText: "Campus Tour",
     secondaryCtaLink: "/infrastructure",
     bgImage: "/homepage-banner-1.jpeg",
   },
   {
     id: "slide-2",
-    badge: "Holistic Development",
-    titleLine1: "Empowering",
-    titleHighlight: "Future Leaders",
-    subtitle: "Innovation & Integrity",
+    badge: "Holistic Learning Experience",
+    titleLine1: "Learning",
+    titleHighlight: "Beyond Classrooms",
+    subtitle: "Curiosity • Creativity • Character",
     description:
-      "Integrating cutting-edge STEM education with creative expression, athletics, and community leadership.",
+      "From world-class academics and innovation labs to performing arts, sports, and community service, every experience is designed to nurture confident, compassionate, and future-ready learners.",
     primaryCtaText: "Explore Academics",
     primaryCtaLink: "/learning-experience",
-    secondaryCtaText: "Curriculum Info",
+    secondaryCtaText: "View Curriculum",
     secondaryCtaLink: "/international-curriculum",
     bgImage: "/homepage-banner-2.jpeg",
   },
   {
     id: "slide-3",
-    badge: "Global Perspective",
-    titleLine1: "Inspiring",
-    titleHighlight: "Global Citizens",
-    subtitle: "Unity & Diversity",
+    badge: "Admissions Open",
+    titleLine1: "Building",
+    titleHighlight: "Future Leaders",
+    subtitle: "A Community of Excellence & Values",
     description:
-      "Collaborative international exchange programs designed to foster empathy, cross-cultural learning, and lifelong curiosity.",
-    primaryCtaText: "Apply For Admission",
+      "Join a vibrant learning community where innovation, integrity, diversity, and global perspectives inspire every student to reach their highest potential.",
+    primaryCtaText: "Apply Now",
     primaryCtaLink: "/admissions",
-    secondaryCtaText: "Alumni Stories",
+    secondaryCtaText: "Why Vasant Valley?",
     secondaryCtaLink: "/about-us",
     bgImage: "/homepage-banner-3.jpeg",
   },
 ];
-
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -94,9 +93,8 @@ export default function HeroSection() {
         {HERO_SLIDES.map((slide, idx) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out ${
-              idx === currentSlide ? "opacity-60 scale-105" : "opacity-0 scale-100"
-            } transform pointer-events-none`}
+            className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out ${idx === currentSlide ? "opacity-60 scale-105" : "opacity-0 scale-100"
+              } transform pointer-events-none`}
             style={{ backgroundImage: `url('${slide.bgImage}')` }}
           />
         ))}
@@ -172,9 +170,8 @@ export default function HeroSection() {
                     key={slide.id}
                     onClick={() => setCurrentSlide(idx)}
                     aria-label={`Go to slide ${idx + 1}`}
-                    className={`relative h-2 rounded-full transition-all duration-500 cursor-pointer overflow-hidden ${
-                      isActive ? "w-10 bg-[#800000]" : "w-2.5 bg-white/30 hover:bg-white/60"
-                    }`}
+                    className={`relative h-2 rounded-full transition-all duration-500 cursor-pointer overflow-hidden ${isActive ? "w-10 bg-[#800000]" : "w-2.5 bg-white/30 hover:bg-white/60"
+                      }`}
                   >
                     {isActive && (
                       <span
