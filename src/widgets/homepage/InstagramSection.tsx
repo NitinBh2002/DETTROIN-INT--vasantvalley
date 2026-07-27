@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import Slider from "@/src/components/Slider";
+import Link from "next/link";
 
 interface InstagramPost {
   id: string;
@@ -21,7 +22,7 @@ const INSTAGRAM_POSTS: InstagramPost[] = [
     type: "carousel",
     title: "Vasant Valley Learning Experiences",
     subtitle: "Classroom without boundaries across 8 acres",
-    image: "/education-life-section.png",
+    image: "/insta-1.jpg",
     likes: "1.2k",
     comments: "48",
     layoutType: "banner",
@@ -30,7 +31,7 @@ const INSTAGRAM_POSTS: InstagramPost[] = [
     id: "2",
     type: "reel",
     title: "Summer Holiday Adventures & Discovery",
-    image: "/our-philosphy.png",
+    image: "/insta-2.jpg",
     likes: "2.4k",
     comments: "89",
     layoutType: "brush",
@@ -40,7 +41,7 @@ const INSTAGRAM_POSTS: InstagramPost[] = [
     type: "carousel",
     title: "Annual STEM & Book Fair Highlights",
     subtitle: "Excellence in Action",
-    image: "/about-image.jpg",
+    image: "/insta-3.jpg",
     likes: "980",
     comments: "32",
     layoutType: "fair",
@@ -49,7 +50,7 @@ const INSTAGRAM_POSTS: InstagramPost[] = [
     id: "4",
     type: "carousel",
     title: "Sports Day Victories & Teamwork",
-    image: "/a-day-in-school-banner.jpg",
+    image: "/insta-4.jpg",
     likes: "1.8k",
     comments: "64",
     layoutType: "polaroid",
@@ -73,21 +74,14 @@ export default function InstagramSection() {
             </h2>
           </div>
 
-          <a
-            href="https://www.instagram.com/vasantvalleyschool/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-[#800000] hover:bg-[#600010] text-white px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all w-fit"
-          >
-            <span>@vasantvalleyschool</span>
-            <span>&rarr;</span>
-          </a>
+
         </div>
 
         <div>
           <Slider>
             {INSTAGRAM_POSTS.map((post) => (
-              <div
+              <Link href='https://www.instagram.com/reel/DbN-aqgzhmY/'
+                prefetch={false}
                 key={post.id}
                 className="min-w-[280px] sm:min-w-[310px] lg:min-w-[325px] max-w-[340px] flex-1 snap-start rounded-2xl border border-stone-200 overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 bg-white group flex flex-col justify-between h-[380px]"
               >
@@ -182,7 +176,7 @@ export default function InstagramSection() {
                     </div>
                   </div>
                 )}
-              </div>
+              </Link>
             ))}
           </Slider>
         </div>

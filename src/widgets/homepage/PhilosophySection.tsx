@@ -37,7 +37,7 @@ export default function PhilosophySection() {
             </p>
 
             <div className="pt-2">
-              <Button href="/about-us/vision" variant="primary">
+              <Button href="/about-us" variant="primary">
                 <span>VISION</span>
               </Button>
             </div>
