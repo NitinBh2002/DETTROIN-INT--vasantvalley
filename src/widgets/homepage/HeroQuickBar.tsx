@@ -4,7 +4,7 @@ export default function HeroQuickBar() {
   return (
     <div className="w-full bg-white text-stone-900 border-b border-stone-200 shadow-md py-5 relative z-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        
+
         <div className="flex items-center gap-3 p-3 rounded-xl bg-stone-50/70 border border-stone-100 hover:bg-stone-50 transition-colors">
           <div className="p-2.5 bg-red-100 rounded-lg text-[#800000] shrink-0">
             <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -13,7 +13,7 @@ export default function HeroQuickBar() {
             </svg>
           </div>
           <div>
-            <h3 className="text-xs font-bold text-stone-900">Holistic Education</h3>
+            <h2 className="text-xs font-bold text-stone-900">Holistic Education</h2>
             <p className="text-[11px] text-stone-600">Balanced academics, arts & values.</p>
           </div>
         </div>
@@ -26,7 +26,7 @@ export default function HeroQuickBar() {
             </svg>
           </div>
           <div>
-            <h3 className="text-xs font-bold text-stone-900">Global Perspective</h3>
+            <h2 className="text-xs font-bold text-stone-900">Global Perspective</h2>
             <p className="text-[11px] text-stone-600">International Cambridge curriculum.</p>
           </div>
         </div>
@@ -38,7 +38,7 @@ export default function HeroQuickBar() {
             </svg>
           </div>
           <div>
-            <h3 className="text-xs font-bold text-stone-900">Safe Environment</h3>
+            <h2 className="text-xs font-bold text-stone-900">Safe Environment</h2>
             <p className="text-[11px] text-stone-600">Nurturing & secure 8-acre campus.</p>
           </div>
         </div>
@@ -50,8 +50,8 @@ export default function HeroQuickBar() {
             </svg>
           </div>
           <div>
-            <h3 className="text-xs font-bold text-stone-900">Excellence Driven</h3>
-            <p className="text-[11px] text-stone-500">Encouraging extraordinary talents.</p>
+            <h2 className="text-xs font-bold text-stone-900">Excellence Driven</h2>
+            <p className="text-[11px] text-stone-600">Encouraging extraordinary talents.</p>
           </div>
         </div>
 

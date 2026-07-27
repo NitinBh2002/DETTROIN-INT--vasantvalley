@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import Button from "@/src/components/Button";
 
 interface HeroSlide {
@@ -94,11 +95,19 @@ export default function HeroSection() {
         {HERO_SLIDES.map((slide, idx) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out ${
+            className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
               idx === currentSlide ? "opacity-60 scale-105" : "opacity-0 scale-100"
             } transform pointer-events-none`}
-            style={{ backgroundImage: `url('${slide.bgImage}')` }}
-          />
+          >
+            <Image
+              src={slide.bgImage}
+              alt={slide.titleHighlight}
+              fill
+              priority={idx === 0}
+              sizes="100vw"
+              className="object-cover object-center"
+            />
+          </div>
         ))}
 
         <div className="absolute inset-0 bg-gradient-to-r from-stone-950/95 via-stone-950/75 to-transparent z-10" />
