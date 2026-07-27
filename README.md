@@ -7,7 +7,7 @@
 - **Email Address:** Bhatnagarak77@gmail.com
 - **GitHub Username:** NitinBh2002
 - **Selected Website:** https://www.vasantvalley.org/
-- **Live Demo Link:** *<Add your deployed Vercel URL here>*
+- **Live Demo Link:** *https://dettroin-int-vasantvalley.vercel.app/*
 
 ---
 
@@ -76,4 +76,4 @@ http://localhost:3000
 
 This project is deployed using **Vercel**.
 
-**Live Demo:** *<Add your Vercel deployment link here>*
+**Live Demo:** *https://dettroin-int-vasantvalley.vercel.app/*

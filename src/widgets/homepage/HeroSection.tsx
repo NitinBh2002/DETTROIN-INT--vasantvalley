@@ -61,6 +61,7 @@ const HERO_SLIDES: HeroSlide[] = [
     bgImage: "/homepage-banner-3.jpeg",
   },
 ];
+
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
@@ -77,7 +78,7 @@ export default function HeroSection() {
     if (isPaused) return;
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000);
+    }, 3500);
     return () => clearInterval(interval);
   }, [isPaused, nextSlide]);
 
@@ -85,7 +86,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="relative bg-stone-950 text-white w-full aspect-[16/9] min-h-[400px] sm:min-h-[460px] lg:min-h-[500px] max-h-[580px] flex flex-col justify-between overflow-hidden select-none"
+      className="relative bg-stone-950 text-white w-full h-[460px] sm:h-[500px] lg:h-[540px] flex flex-col justify-center overflow-hidden select-none"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -93,8 +94,9 @@ export default function HeroSection() {
         {HERO_SLIDES.map((slide, idx) => (
           <div
             key={slide.id}
-            className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out ${idx === currentSlide ? "opacity-60 scale-105" : "opacity-0 scale-100"
-              } transform pointer-events-none`}
+            className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out ${
+              idx === currentSlide ? "opacity-60 scale-105" : "opacity-0 scale-100"
+            } transform pointer-events-none`}
             style={{ backgroundImage: `url('${slide.bgImage}')` }}
           />
         ))}
@@ -103,7 +105,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent z-10" />
       </div>
 
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-12 flex-1 flex flex-col justify-center w-full">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 flex flex-col justify-center w-full">
         <div className="max-w-xl space-y-4">
           <div className="flex items-center gap-2.5">
             <span className="w-8 h-[2px] bg-amber-400"></span>
@@ -122,7 +124,7 @@ export default function HeroSection() {
             </p>
           </div>
 
-          <p className="text-stone-200 text-xs sm:text-sm max-w-md font-light leading-relaxed">
+          <p className="text-stone-200 text-xs sm:text-sm max-w-md font-light leading-relaxed min-h-[48px]">
             {activeSlideData.description}
           </p>
 
@@ -170,8 +172,9 @@ export default function HeroSection() {
                     key={slide.id}
                     onClick={() => setCurrentSlide(idx)}
                     aria-label={`Go to slide ${idx + 1}`}
-                    className={`relative h-2 rounded-full transition-all duration-500 cursor-pointer overflow-hidden ${isActive ? "w-10 bg-[#800000]" : "w-2.5 bg-white/30 hover:bg-white/60"
-                      }`}
+                    className={`relative h-2 rounded-full transition-all duration-500 cursor-pointer overflow-hidden ${
+                      isActive ? "w-10 bg-[#800000]" : "w-2.5 bg-white/30 hover:bg-white/60"
+                    }`}
                   >
                     {isActive && (
                       <span
@@ -185,60 +188,6 @@ export default function HeroSection() {
             </div>
           </div>
 
-        </div>
-      </div>
-
-      <div className="relative z-20 bg-white/95 backdrop-blur-md text-stone-900 border-t border-stone-200 shadow-xl py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          <div className="flex items-center gap-3 p-2 rounded-xl hover:bg-stone-50 transition-colors">
-            <div className="p-2 bg-red-100 rounded-lg text-[#800000] shrink-0">
-              <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 14l9-5-9-5-9 5 9 5z" />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-              </svg>
-            </div>
-            <div>
-              <h3 className="text-xs font-bold text-stone-900">Holistic Education</h3>
-              <p className="text-[11px] text-stone-500">Balanced academics, arts & values.</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3 p-2 rounded-xl hover:bg-stone-50 transition-colors">
-            <div className="p-2 bg-red-100 rounded-lg text-[#800000] shrink-0">
-              <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <circle cx="12" cy="12" r="9" strokeWidth={1.8} />
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M3.6 9h16.8M3.6 15h16.8M11.5 3a17 17 0 000 18M12.5 3a17 17 0 010 18" />
-              </svg>
-            </div>
-            <div>
-              <h3 className="text-xs font-bold text-stone-900">Global Perspective</h3>
-              <p className="text-[11px] text-stone-500">International Cambridge curriculum.</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3 p-2 rounded-xl hover:bg-stone-50 transition-colors">
-            <div className="p-2 bg-red-100 rounded-lg text-[#800000] shrink-0">
-              <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            </div>
-            <div>
-              <h3 className="text-xs font-bold text-stone-900">Safe Environment</h3>
-              <p className="text-[11px] text-stone-500">Nurturing & secure 8-acre campus.</p>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-3 p-2 rounded-xl hover:bg-stone-50 transition-colors">
-            <div className="p-2 bg-red-100 rounded-lg text-[#800000] shrink-0">
-              <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0v-5a2 2 0 012-2h2a2 2 0 012 2v5m-4 0h4" />
-              </svg>
-            </div>
-            <div>
-              <h3 className="text-xs font-bold text-stone-900">Excellence Driven</h3>
-              <p className="text-[11px] text-stone-500">Encouraging extraordinary talents.</p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
