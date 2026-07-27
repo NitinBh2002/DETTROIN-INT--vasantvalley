@@ -123,18 +123,16 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2.5 text-xs">
                 {[
-                  "About Us",
-                  "Admissions",
-                  "Announcements",
-                  "News & Events",
-                  "Login",
-                  "FAQs",
-                  "Statutory Compliances",
-                  "Privacy Policy",
+                  { name: "About Us", href: "/about-us" },
+                  { name: "Admissions", href: "/admissions" },
+                  { name: "Announcements", href: "/#announcements" },
+                  { name: "News & Events", href: "/news" },
+                  { name: "FAQs", href: "/faq" },
+                  { name: "Privacy Policy", href: "/privacy" },
                 ].map((item, idx) => (
                   <li key={idx}>
                     <a
-                      href="#"
+                      href={item.href}
                       className="group flex items-center text-stone-700 hover:text-[#800000] transition-colors duration-150 font-medium"
                     >
                       <svg
@@ -145,7 +143,7 @@ export default function Footer() {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                       </svg>
-                      {item}
+                      {item.name}
                     </a>
                   </li>
                 ))}
@@ -158,15 +156,15 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2.5 text-xs">
                 {[
-                  "School Profile",
-                  "College Placements",
-                  "Alumni Connect",
-                  "Careers",
-                  "Contact Us",
+                  { name: "School Profile", href: "/about-us" },
+                  { name: "Admissions Portal", href: "/admissions" },
+                  { name: "News & Articles", href: "/news" },
+                  { name: "Frequently Asked Questions", href: "/faq" },
+                  { name: "Contact Us", href: "/contact" },
                 ].map((item, idx) => (
                   <li key={idx}>
                     <a
-                      href="#"
+                      href={item.href}
                       className="group flex items-center text-stone-700 hover:text-[#800000] transition-colors duration-150 font-medium"
                     >
                       <svg
@@ -177,7 +175,7 @@ export default function Footer() {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                       </svg>
-                      {item}
+                      {item.name}
                     </a>
                   </li>
                 ))}
