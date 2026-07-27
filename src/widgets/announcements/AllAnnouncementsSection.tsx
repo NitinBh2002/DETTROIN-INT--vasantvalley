@@ -191,9 +191,9 @@ export default function AllAnnouncementsSection() {
         <div className="flex items-center justify-between border-b border-stone-200 pb-4">
           <div className="flex items-center gap-3">
             <span className="w-8 h-[2.5px] bg-[#800000]"></span>
-            <span className="text-[#800000] text-xs font-extrabold tracking-widest uppercase">
+            <h2 className="text-[#800000] text-xs font-extrabold tracking-widest uppercase">
               SHOWING {filteredAnnouncements.length} ANNOUNCEMENTS
-            </span>
+            </h2>
           </div>
 
           <span className="text-xs text-stone-500 font-medium">Updated Daily</span>

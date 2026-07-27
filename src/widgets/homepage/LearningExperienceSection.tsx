@@ -153,7 +153,7 @@ export default function LearningExperienceSection() {
           </div>
 
           <div className="lg:col-span-7 space-y-3">
-            <span className="text-[10px] font-extrabold uppercase tracking-widest text-stone-500 block px-1">
+            <span className="text-[10px] font-extrabold uppercase tracking-widest text-[#800000] block px-1">
               8 Core Pillars of Education
             </span>
 
@@ -167,7 +167,7 @@ export default function LearningExperienceSection() {
                     className={`p-3 rounded-xl border text-left transition-all duration-200 space-y-1.5 cursor-pointer ${
                       isActive
                         ? "bg-[#800000] text-white border-[#800000] shadow-md scale-[1.02]"
-                        : "bg-white text-stone-800 border-stone-200 hover:border-amber-400 hover:bg-stone-50"
+                        : "bg-white text-stone-900 border-stone-200 hover:border-amber-400 hover:bg-stone-50"
                     }`}
                   >
                     <div className="flex items-center justify-between">
@@ -178,13 +178,13 @@ export default function LearningExperienceSection() {
                       >
                         {pillar.icon}
                       </div>
-                      <span className={`text-[9px] font-bold uppercase ${isActive ? "text-amber-300" : "text-stone-400"}`}>
+                      <span className={`text-[9px] font-bold uppercase ${isActive ? "text-amber-300" : "text-stone-600"}`}>
                         PILLAR
                       </span>
                     </div>
 
                     <h4 className="text-xs font-bold leading-tight font-serif">{pillar.label}</h4>
-                    <p className={`text-[10px] leading-tight ${isActive ? "text-stone-200" : "text-stone-500"}`}>
+                    <p className={`text-[10px] leading-tight ${isActive ? "text-stone-200" : "text-stone-700"}`}>
                       {pillar.desc}
                     </p>
                   </button>

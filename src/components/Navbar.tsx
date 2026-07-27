@@ -116,6 +116,7 @@ export default function Navbar() {
             <button
               onClick={() => setIsSearchOpen(!isSearchOpen)}
               className="text-stone-700 p-2 rounded-lg hover:bg-stone-100"
+              aria-label="Toggle search bar"
             >
               <SearchIcon className="w-5 h-5" />
             </button>
