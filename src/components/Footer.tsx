@@ -87,19 +87,16 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2.5 text-xs">
                 {[
-                  "Home",
-                  "Vision & Philosophy",
-                  "The Learning Experience",
-                  "International Curriculum",
-                  "Infrastructure",
-                  "Special Education Needs",
-                  "Intra–School Programmes",
-                  "Inter–School Programmes",
-                  "A Day in School",
+                  { name: "Home", href: "/" },
+                  { name: "Vision & Philosophy", href: "/about-us#vision" },
+                  { name: "The Learning Experience", href: "/learning-experience" },
+                  { name: "International Curriculum", href: "/international-curriculum" },
+                  { name: "Infrastructure", href: "/infrastructure" },
+                  { name: "A Day in School", href: "/a-day-in-school" },
                 ].map((item, idx) => (
                   <li key={idx}>
                     <a
-                      href="#"
+                      href={item.href}
                       className="group flex items-center text-stone-700 hover:text-[#800000] transition-colors duration-150 font-medium"
                     >
                       <svg
@@ -110,7 +107,7 @@ export default function Footer() {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
                       </svg>
-                      {item}
+                      {item.name}
                     </a>
                   </li>
                 ))}
