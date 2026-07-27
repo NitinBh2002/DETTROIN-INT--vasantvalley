@@ -14,18 +14,13 @@ export default function Footer() {
           
           <div className="lg:col-span-3 space-y-6 lg:pr-4 lg:border-r lg:border-stone-200/80 min-h-full">
             <div className="flex flex-col items-start">
-              <div className="relative w-28 h-28 flex items-center justify-center p-2">
-                <div className="absolute inset-2 border-2 border-[#800000] rotate-45 flex items-center justify-center bg-white shadow-sm transition-transform hover:scale-105"></div>
-                <div className="relative z-10 text-center px-1">
-                  <span className="text-[7px] tracking-wider text-[#800000] block font-serif uppercase font-semibold">
-                    संज्ञानात् अभि
-                  </span>
-                  <div className="text-[10px] font-extrabold tracking-wider text-[#800000] uppercase my-0.5 border-y border-[#800000]/30 py-0.5 font-sans">
-                    VASANT VALLEY
-                  </div>
-                  <div className="w-2 h-0.5 bg-[#800000] mx-auto"></div>
-                </div>
-              </div>
+              <a href="/" className="group focus:outline-none">
+                <img
+                  src="/logo-vasant-valley.svg"
+                  alt="Vasant Valley School Logo"
+                  className="h-20 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
+                />
+              </a>
             </div>
 
             <p className="text-sm text-stone-600 leading-relaxed max-w-xs font-medium">

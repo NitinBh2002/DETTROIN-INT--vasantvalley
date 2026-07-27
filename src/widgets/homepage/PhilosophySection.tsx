@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 export default function PhilosophySection() {
   return (
@@ -13,7 +14,7 @@ export default function PhilosophySection() {
 
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           <div className="lg:col-span-6 space-y-6 lg:pr-8">
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-xl bg-red-100/80 text-[#800000] flex items-center justify-center shadow-sm">
@@ -36,7 +37,7 @@ export default function PhilosophySection() {
 
             <div className="pt-2">
               <a
-                href="#vision"
+                href="/about-us#vision"
                 className="inline-flex items-center gap-2 bg-[#800000] hover:bg-[#660000] text-white px-7 py-3 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"
               >
                 <span>&rarr; VISION</span>
@@ -45,23 +46,20 @@ export default function PhilosophySection() {
           </div>
 
           <div className="lg:col-span-6 relative">
-            <div className="absolute -top-6 right-8 w-24 h-16 grid grid-cols-6 gap-2 opacity-30 pointer-events-none">
-              {Array.from({ length: 24 }).map((_, i) => (
-                <div key={i} className="w-1.5 h-1.5 rounded-full bg-[#800000]"></div>
-              ))}
-            </div>
 
-            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-stone-900 border-4 border-white transform lg:rotate-1 hover:rotate-0 transition-transform duration-500">
+            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-stone-900 border-4 border-white ">
               <div className="relative aspect-[16/10] bg-stone-800">
-                <img
-                  src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop"
+                <Image
+                  src="/our-philosphy.png"
                   alt="Vasant Valley School Sports & Student Achievements"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/40 via-transparent to-transparent"></div>
               </div>
 
-              <div className="absolute bottom-0 left-0 bg-[#800000] text-white py-3 px-6 rounded-tr-3xl font-serif text-xs font-medium tracking-wide">
+              <div className="absolute bottom-0 left-0 bg-[#800000] text-white py-3 px-6 rounded-tr-3xl font-serif text-xs font-medium tracking-wide z-10">
                 Excellence in Action
               </div>
             </div>

@@ -30,13 +30,11 @@ const HERO_SLIDES: HeroSlide[] = [
     description:
       "Nurturing curious minds and confident hearts to shape a better tomorrow through holistic education and moral values.",
     primaryCtaText: "Discover More",
-    primaryCtaLink: "#discover",
+    primaryCtaLink: "/about-us",
     secondaryCtaText: "Virtual Tour",
-    secondaryCtaLink: "#tour",
-    bgImage:
-      "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=1920&auto=format&fit=crop",
-    cardImage:
-      "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1200&auto=format&fit=crop",
+    secondaryCtaLink: "/infrastructure",
+    bgImage: "/homepage-banner-1.jpeg",
+    cardImage: "/homepage-banner-1.jpeg",
     cardBadge: "A",
     cardTitle: "Auditorium & Arts",
     cardDesc:
@@ -51,13 +49,11 @@ const HERO_SLIDES: HeroSlide[] = [
     description:
       "Integrating cutting-edge STEM education with creative expression, athletics, and community leadership.",
     primaryCtaText: "Explore Academics",
-    primaryCtaLink: "#academics",
+    primaryCtaLink: "/learning-experience",
     secondaryCtaText: "Curriculum Info",
-    secondaryCtaLink: "#curriculum",
-    bgImage:
-      "https://images.unsplash.com/photo-1562774053-701939374585?q=80&w=1920&auto=format&fit=crop",
-    cardImage:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop",
+    secondaryCtaLink: "/international-curriculum",
+    bgImage: "/homepage-banner-2.jpeg",
+    cardImage: "/homepage-banner-2.jpeg",
     cardBadge: "S",
     cardTitle: "STEM & Innovation Lab",
     cardDesc:
@@ -72,13 +68,11 @@ const HERO_SLIDES: HeroSlide[] = [
     description:
       "Collaborative international exchange programs designed to foster empathy, cross-cultural learning, and lifelong curiosity.",
     primaryCtaText: "Apply For Admission",
-    primaryCtaLink: "#admissions",
+    primaryCtaLink: "/admissions",
     secondaryCtaText: "Alumni Stories",
-    secondaryCtaLink: "#alumni",
-    bgImage:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1920&auto=format&fit=crop",
-    cardImage:
-      "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1200&auto=format&fit=crop",
+    secondaryCtaLink: "/about-us",
+    bgImage: "/homepage-banner-3.jpeg",
+    cardImage: "/homepage-banner-3.jpeg",
     cardBadge: "G",
     cardTitle: "International Exchange",
     cardDesc:

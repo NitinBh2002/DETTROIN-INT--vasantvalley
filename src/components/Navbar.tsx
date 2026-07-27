@@ -46,28 +46,11 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           
           <a href="/" className="flex items-center gap-3 group focus:outline-none">
-            <div className="relative w-12 h-12 flex items-center justify-center transition-transform group-hover:scale-105 duration-300">
-              <div className="absolute inset-0 border-2 border-stone-800 transform rotate-45 rounded-sm bg-white shadow-sm"></div>
-              <div className="absolute inset-1 border border-stone-300 transform rotate-45"></div>
-              <div className="relative z-10 flex flex-col items-center justify-center text-center p-1">
-                <span className="text-[7px] font-black tracking-widest text-[#800000] uppercase leading-none">
-                  VASANT
-                </span>
-                <div className="w-5 h-[1.5px] bg-[#800000] my-[2px]"></div>
-                <span className="text-[6.5px] font-bold tracking-wider text-stone-800 uppercase leading-none">
-                  VALLEY
-                </span>
-              </div>
-            </div>
-            
-            <div className="flex flex-col">
-              <span className="font-extrabold text-stone-900 tracking-tight text-lg leading-tight group-hover:text-[#800000] transition-colors">
-                VASANT VALLEY
-              </span>
-              <span className="text-[10px] tracking-widest text-stone-500 uppercase font-semibold">
-                Excellence In Education
-              </span>
-            </div>
+            <img
+              src="/logo-vasant-valley.svg"
+              alt="Vasant Valley School Logo"
+              className="h-14 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
+            />
           </a>
 
           <nav className="hidden lg:flex items-center space-x-1 xl:space-x-2" ref={dropdownRef}>

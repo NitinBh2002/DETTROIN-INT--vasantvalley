@@ -1,6 +1,7 @@
 import Navbar from "@/src/components/Navbar";
 import HeroSection from "@/src/widgets/homepage/HeroSection";
 import PhilosophySection from "@/src/widgets/homepage/PhilosophySection";
+import EducationLifeSection from "@/src/widgets/homepage/EducationLifeSection";
 import OurJourneySection from "@/src/widgets/homepage/OurJourneySection";
 import LearningExperienceSection from "@/src/widgets/homepage/LearningExperienceSection";
 import Announcement from "@/src/widgets/homepage/Announcement";
@@ -15,6 +16,7 @@ export default function Home() {
         <HeroSection />
         <PhilosophySection />
         <OurJourneySection />
+        <EducationLifeSection />
         <LearningExperienceSection />
         <Announcement />
         <InstagramSection />
