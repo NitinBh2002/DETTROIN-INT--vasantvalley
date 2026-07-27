@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export default function Footer() {
   const scrollToTop = () => {
     if (typeof window !== "undefined") {
@@ -15,10 +17,13 @@ export default function Footer() {
           <div className="lg:col-span-3 space-y-6 lg:pr-4 lg:border-r lg:border-stone-200/80 min-h-full">
             <div className="flex flex-col items-start">
               <a href="/" className="group focus:outline-none">
-                <img
+                <Image
                   src="/logo-vasant-valley.svg"
                   alt="Vasant Valley School Logo"
-                  className="h-20 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
+                  width={240}
+                  height={80}
+                  style={{ width: "auto" }}
+                  className="h-20 object-contain transition-transform group-hover:scale-105 duration-300"
                 />
               </a>
             </div>
@@ -78,49 +83,14 @@ export default function Footer() {
           <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-3 gap-6 lg:px-4 lg:border-r lg:border-stone-200/80 min-h-full">
             <div>
               <h3 className="text-sm font-bold tracking-wider text-[#800000] uppercase mb-4 pb-1 border-b border-[#800000]/20 inline-block">
-                EXPLORE
-              </h3>
-              <ul className="space-y-2.5 text-xs">
-                {[
-                  { name: "Home", href: "/" },
-                  { name: "Vision & Philosophy", href: "/about-us#vision" },
-                  { name: "The Learning Experience", href: "/learning-experience" },
-                  { name: "International Curriculum", href: "/international-curriculum" },
-                  { name: "Infrastructure", href: "/infrastructure" },
-                  { name: "A Day in School", href: "/a-day-in-school" },
-                ].map((item, idx) => (
-                  <li key={idx}>
-                    <a
-                      href={item.href}
-                      className="group flex items-center text-stone-700 hover:text-[#800000] transition-colors duration-150 font-medium"
-                    >
-                      <svg
-                        className="w-3 h-3 mr-1.5 text-stone-400 group-hover:text-[#800000] group-hover:translate-x-0.5 transition-all duration-150"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
-                      </svg>
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="text-sm font-bold tracking-wider text-[#800000] uppercase mb-4 pb-1 border-b border-[#800000]/20 inline-block">
                 ABOUT US
               </h3>
               <ul className="space-y-2.5 text-xs">
                 {[
                   { name: "About Us", href: "/about-us" },
                   { name: "Admissions", href: "/admissions" },
-                  { name: "Announcements", href: "/#announcements" },
+                  { name: "Announcements", href: "/announcements" },
                   { name: "News & Events", href: "/news" },
-                  { name: "FAQs", href: "/faq" },
-                  { name: "Privacy Policy", href: "/privacy" },
                 ].map((item, idx) => (
                   <li key={idx}>
                     <a
@@ -148,11 +118,42 @@ export default function Footer() {
               </h3>
               <ul className="space-y-2.5 text-xs">
                 {[
-                  { name: "School Profile", href: "/about-us" },
-                  { name: "Admissions Portal", href: "/admissions" },
-                  { name: "News & Articles", href: "/news" },
-                  { name: "Frequently Asked Questions", href: "/faq" },
                   { name: "Contact Us", href: "/contact" },
+                  { name: "Frequently Asked Questions", href: "/faq" },
+                  { name: "Privacy Policy", href: "/privacy" },
+                  { name: "Terms & Conditions", href: "/privacy" },
+                ].map((item, idx) => (
+                  <li key={idx}>
+                    <a
+                      href={item.href}
+                      className="group flex items-center text-stone-700 hover:text-[#800000] transition-colors duration-150 font-medium"
+                    >
+                      <svg
+                        className="w-3 h-3 mr-1.5 text-stone-400 group-hover:text-[#800000] group-hover:translate-x-0.5 transition-all duration-150"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M9 5l7 7-7 7" />
+                      </svg>
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-sm font-bold tracking-wider text-[#800000] uppercase mb-4 pb-1 border-b border-[#800000]/20 inline-block">
+                LEARNING & CAMPUS
+              </h3>
+              <ul className="space-y-2.5 text-xs">
+                {[
+                  { name: "Vision & Philosophy", href: "/about-us" },
+                  { name: "The Learning Experience", href: "/learning-experience" },
+                  { name: "International Curriculum", href: "/international-curriculum" },
+                  { name: "Infrastructure", href: "/infrastructure" },
+                  { name: "A Day in School", href: "/a-day-in-school" },
                 ].map((item, idx) => (
                   <li key={idx}>
                     <a
@@ -199,8 +200,8 @@ export default function Footer() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <a href="mailto:info@vasantvalley.edu.in" className="text-stone-800 hover:text-[#800000] font-medium transition-colors">
-                    info@vasantvalley.edu.in
+                  <a href="mailto:vasantvalley@vasantvalley.edu.in" className="text-stone-800 hover:text-[#800000] font-medium transition-colors">
+                    vasantvalley@vasantvalley.edu.in
                   </a>
                 </div>
 
@@ -248,7 +249,9 @@ export default function Footer() {
                 </a>
 
                 <a
-                  href="#"
+                  href="https://www.instagram.com/vasantvalleyschool/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
                   className="w-9 h-9 rounded-full border border-[#800000] text-[#800000] hover:bg-[#800000] hover:text-white flex items-center justify-center transition-colors duration-200 shadow-sm"
                 >
@@ -298,7 +301,7 @@ export default function Footer() {
               </svg>
             </div>
             <span className="font-normal tracking-wide">
-              © Vasant Valley School 2021
+              © Vasant Valley School 2026
             </span>
             <span className="hidden sm:inline text-white/40">|</span>
           </div>
@@ -309,17 +312,17 @@ export default function Footer() {
 
           <div className="flex items-center gap-4 shrink-0">
             <div className="flex items-center gap-2 text-white/90 text-[11px] sm:text-xs">
-              <a href="#" className="hover:text-white transition-colors">Terms of Use</a>
+              <a href="/privacy" className="hover:text-white transition-colors">Privacy Policy</a>
               <span className="text-white/40">|</span>
-              <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
+              <a href="/privacy" className="hover:text-white transition-colors">Terms of Use</a>
               <span className="text-white/40">|</span>
-              <a href="#" className="hover:text-white transition-colors">Sitemap</a>
+              <a href="/contact" className="hover:text-white transition-colors">Contact</a>
             </div>
 
             <button
               onClick={scrollToTop}
               aria-label="Back to Top"
-              className="w-8 h-8 rounded-full bg-white text-[#800000] flex items-center justify-center hover:bg-stone-100 transition-all duration-200 shadow-md ml-2 group"
+              className="w-8 h-8 rounded-full bg-white text-[#800000] flex items-center justify-center hover:bg-stone-100 transition-all duration-200 shadow-md ml-2 group cursor-pointer"
             >
               <svg className="w-4 h-4 transform group-hover:-translate-y-0.5 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 10l7-7m0 0l7 7m-7-7v18" />

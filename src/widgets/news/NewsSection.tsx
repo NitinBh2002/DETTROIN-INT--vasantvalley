@@ -1,7 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import PageHero from "@/src/components/PageHero";
+import Button from "@/src/components/Button";
 
 interface NewsItem {
   id: string;
@@ -31,7 +33,7 @@ const NEWS_ARTICLES: NewsItem[] = [
     category: "Achievement",
     date: "July 24, 2026",
     readTime: "3 min read",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop",
+    image: "/news-1.jpeg",
     summary: "Vasant Valley School delegates showcased exceptional leadership and diplomacy at the international youth summit held in Singapore.",
     featured: true,
   },
@@ -41,7 +43,7 @@ const NEWS_ARTICLES: NewsItem[] = [
     category: "Academics",
     date: "July 18, 2026",
     readTime: "4 min read",
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop",
+    image: "/news-2.jpeg",
     summary: "Recognized for holistic academic development, sports infrastructure, and innovative teaching methodologies in the national school survey.",
   },
   {
@@ -50,7 +52,7 @@ const NEWS_ARTICLES: NewsItem[] = [
     category: "Sports",
     date: "July 12, 2026",
     readTime: "2 min read",
-    image: "https://images.unsplash.com/photo-1546519638-68e109498ffc?q=80&w=800&auto=format&fit=crop",
+    image: "/news-3.jpeg",
     summary: "Our senior boys and girls teams displayed formidable teamwork and skill, securing gold medals in the CBSE regional tournament.",
   },
   {
@@ -59,27 +61,10 @@ const NEWS_ARTICLES: NewsItem[] = [
     category: "Cultural",
     date: "June 28, 2026",
     readTime: "3 min read",
-    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=800&auto=format&fit=crop",
+    image: "/news-4.jpeg",
     summary: "Over 400 students across junior and senior school participated in classical music, contemporary drama, and vocal performances.",
-  },
-  {
-    id: "5",
-    title: "Teacher Enrichment Programme: Global Pedagogy & Mindfulness Workshop",
-    category: "Announcement",
-    date: "June 15, 2026",
-    readTime: "5 min read",
-    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=800&auto=format&fit=crop",
-    summary: "Faculty members completed specialized training modules on inclusive education, project-based learning, and student counseling.",
-  },
-  {
-    id: "6",
-    title: "India University Fair 2026 Hosted at Vasant Valley Campus",
-    category: "Academics",
-    date: "May 30, 2026",
-    readTime: "3 min read",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop",
-    summary: "Representatives from over 45 leading Indian and global universities interacted with Class XI and XII students regarding career pathways.",
-  },
+  }
+
 ];
 
 const UPCOMING_EVENTS: EventItem[] = [
@@ -132,7 +117,7 @@ export default function NewsSection() {
 
   return (
     <div className="w-full font-sans bg-[#FBF9F5] text-stone-900 selection:bg-[#800000] selection:text-white">
-      
+
       <PageHero
         badge="VASANT VALLEY SCHOOL"
         title="News & Events"
@@ -146,9 +131,8 @@ export default function NewsSection() {
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm ${
-                selectedCategory === cat ? "bg-[#800000] text-white shadow-lg" : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
-              }`}
+              className={`px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm ${selectedCategory === cat ? "bg-[#800000] text-white shadow-lg" : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
+                }`}
             >
               {cat}
             </button>
@@ -157,14 +141,17 @@ export default function NewsSection() {
       </div>
 
       <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 lg:py-20 space-y-16">
-        
+
         {selectedCategory === "All" && featuredArticle && (
           <div className="bg-white rounded-3xl overflow-hidden border border-stone-200 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-0 group">
             <div className="lg:col-span-7 relative min-h-[320px] lg:min-h-[420px] overflow-hidden bg-stone-900">
-              <img
+              <Image
                 src={featuredArticle.image}
                 alt={featuredArticle.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 55vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-950/70 via-transparent to-transparent"></div>
               <span className="absolute top-6 left-6 bg-[#800000] text-white text-xs font-extrabold px-3 py-1.5 rounded-full uppercase tracking-wider shadow-md">
@@ -192,13 +179,10 @@ export default function NewsSection() {
               </div>
 
               <div>
-                <a
-                  href={`#news-${featuredArticle.id}`}
-                  className="inline-flex items-center gap-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all"
-                >
+                <Button href={`#news-${featuredArticle.id}`} variant="primary">
                   <span>Read Full Story</span>
                   <span>&rarr;</span>
-                </a>
+                </Button>
               </div>
             </div>
           </div>
@@ -227,10 +211,12 @@ export default function NewsSection() {
               >
                 <div className="space-y-4">
                   <div className="relative aspect-[16/10] overflow-hidden bg-stone-200">
-                    <img
+                    <Image
                       src={article.image}
                       alt={article.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-[#800000] text-[10px] font-extrabold px-3 py-1 rounded-full uppercase tracking-wider border border-amber-200">
                       {article.category}
@@ -306,7 +292,10 @@ export default function NewsSection() {
                   </h3>
 
                   <p className="text-xs text-stone-600 flex items-center gap-1">
-                    <span>📍</span>
+                    <svg className="w-3.5 h-3.5 text-[#800000] inline" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
                     <span>{evt.location}</span>
                   </p>
                 </div>

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import PageHero from "@/src/components/PageHero";
+import Button from "@/src/components/Button";
 
 const FOUNDATION_LINKS = [
   {
@@ -198,12 +199,13 @@ export default function Admissions() {
               <p className="text-xs text-stone-600">
                 Click below to open the online application form for Class 1 to Class 7.
               </p>
-              <a
+              <Button
                 href="#application-form"
-                className="inline-block w-full bg-[#800000] hover:bg-[#660000] text-white py-3 px-6 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all"
+                variant="primary"
+                className="!w-full text-center"
               >
                 CLICK HERE TO FILL THE APPLICATION FORM
-              </a>
+              </Button>
             </div>
           </div>
         </div>
@@ -265,12 +267,13 @@ export default function Admissions() {
                   <p className="text-[11px] text-stone-200 pt-1">Time: 10:00 AM at Vasant Valley School Campus.</p>
                 </div>
 
-                <a
+                <Button
                   href="#class11-form"
-                  className="block text-center w-full bg-white text-[#800000] hover:bg-amber-100 py-3 px-4 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow"
+                  variant="white"
+                  className="!w-full text-center"
                 >
                   CLICK HERE TO FILL THE APPLICATION FORM
-                </a>
+                </Button>
               </div>
             </div>
           </div>

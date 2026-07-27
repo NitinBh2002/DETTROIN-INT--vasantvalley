@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useCallback } from "react";
+import Button from "@/src/components/Button";
 
 interface HeroSlide {
   id: string;
@@ -128,22 +129,17 @@ export default function HeroSection() {
           </p>
 
           <div className="pt-2 flex items-center gap-3 flex-wrap">
-            <a
-              href={activeSlideData.primaryCtaLink}
-              className="inline-flex items-center gap-2 bg-[#800000] hover:bg-[#660000] text-white px-6 py-2.5 rounded-full text-xs font-extrabold uppercase tracking-wider shadow-lg hover:shadow-red-900/40 transition-all duration-300 transform hover:-translate-y-0.5 group"
-            >
+            <Button href={activeSlideData.primaryCtaLink} variant="primary">
               <span>{activeSlideData.primaryCtaText}</span>
-              <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </a>
+              <span>&rarr;</span>
+            </Button>
 
-            <a
+            <Button
               href={activeSlideData.secondaryCtaLink}
-              className="inline-flex items-center gap-2 border border-white/30 hover:border-amber-400 text-stone-200 hover:text-white px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm transition-all duration-300"
+              variant="darkOutline"
             >
               <span>{activeSlideData.secondaryCtaText}</span>
-            </a>
+            </Button>
           </div>
 
           <div className="pt-3 flex items-center gap-3">

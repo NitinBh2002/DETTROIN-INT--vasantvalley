@@ -18,7 +18,10 @@ export default function InfraSpacesSafetyTransport() {
               </h2>
             </div>
             <div className="w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center text-xl shadow-md">
-              🧪
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L5.595 15.12a2 2 0 00-1.8 2.37l.794 3.97a2 2 0 001.96 1.61h11.002a2 2 0 001.96-1.61l.794-3.97a2 2 0 00-.887-2.072z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 3v9m-3-6h6" />
+              </svg>
             </div>
           </div>
 
@@ -34,25 +37,41 @@ export default function InfraSpacesSafetyTransport() {
 
             <div className="lg:col-span-5 grid grid-cols-2 gap-4 text-xs">
               <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-sm space-y-1">
-                <div className="text-xl">📚</div>
+                <div className="w-8 h-8 rounded-lg bg-red-50 text-[#800000] flex items-center justify-center mb-1">
+                  <svg className="w-4 h-4 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
                 <h4 className="font-bold text-stone-900">Two Libraries</h4>
                 <p className="text-[11px] text-stone-500">Rich collection of books & digital resources.</p>
               </div>
 
               <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-sm space-y-1">
-                <div className="text-xl">🩺</div>
+                <div className="w-8 h-8 rounded-lg bg-red-50 text-[#800000] flex items-center justify-center mb-1">
+                  <svg className="w-4 h-4 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                  </svg>
+                </div>
                 <h4 className="font-bold text-stone-900">Occupational Therapy</h4>
                 <p className="text-[11px] text-stone-500">Specialized sensory & motor facility.</p>
               </div>
 
               <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-sm space-y-1">
-                <div className="text-xl">🎭</div>
+                <div className="w-8 h-8 rounded-lg bg-red-50 text-[#800000] flex items-center justify-center mb-1">
+                  <svg className="w-4 h-4 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z" />
+                  </svg>
+                </div>
                 <h4 className="font-bold text-stone-900">Arts Centre & Auditorium</h4>
                 <p className="text-[11px] text-stone-500">Visual arts studios & performance hall.</p>
               </div>
 
               <div className="bg-white p-4 rounded-2xl border border-stone-200 shadow-sm space-y-1">
-                <div className="text-xl">📶</div>
+                <div className="w-8 h-8 rounded-lg bg-red-50 text-[#800000] flex items-center justify-center mb-1">
+                  <svg className="w-4 h-4 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0" />
+                  </svg>
+                </div>
                 <h4 className="font-bold text-stone-900">Wi-Fi Enabled Campus</h4>
                 <p className="text-[11px] text-stone-500">Smart A/V streaming in all classrooms.</p>
               </div>
@@ -71,7 +90,9 @@ export default function InfraSpacesSafetyTransport() {
               </h2>
             </div>
             <div className="w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center text-xl shadow-md">
-              🏥
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+              </svg>
             </div>
           </div>
 
@@ -119,7 +140,9 @@ export default function InfraSpacesSafetyTransport() {
               </h2>
             </div>
             <div className="w-12 h-12 rounded-full bg-[#800000] text-white flex items-center justify-center text-xl shadow-md">
-              🚌
+              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M8 7h8m-8 4h8m-6 4h4M5 3h14a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2z" />
+              </svg>
             </div>
           </div>
 
@@ -137,16 +160,28 @@ export default function InfraSpacesSafetyTransport() {
               <h3 className="text-xs font-bold uppercase tracking-wider text-[#800000]">Fleet Guidelines</h3>
               <ul className="space-y-2 text-xs text-stone-600">
                 <li className="flex items-center gap-2">
-                  <span>✓</span> <span>GPS Tracking & CCTV in buses</span>
+                  <svg className="w-4 h-4 text-[#800000] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>GPS Tracking & CCTV in buses</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>✓</span> <span>Trained female attendants on board</span>
+                  <svg className="w-4 h-4 text-[#800000] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Trained female attendants on board</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>✓</span> <span>Speed governors & first-aid kits</span>
+                  <svg className="w-4 h-4 text-[#800000] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Speed governors & first-aid kits</span>
                 </li>
                 <li className="flex items-center gap-2">
-                  <span>✓</span> <span>Supreme Court safety compliance</span>
+                  <svg className="w-4 h-4 text-[#800000] shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Supreme Court safety compliance</span>
                 </li>
               </ul>
             </div>

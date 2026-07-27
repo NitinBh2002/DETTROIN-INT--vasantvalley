@@ -1,15 +1,10 @@
-import Navbar from "@/src/components/Navbar";
-import Footer from "@/src/components/Footer";
 import FaqSection from "@/src/widgets/faq/FaqSection";
 
+export const metadata = {
+  title: "Frequently Asked Questions | Vasant Valley School",
+  description: "Find quick answers to common questions about admissions, board affiliations, subject options, school timings, and administrative procedures.",
+};
+
 export default function FaqPage() {
-  return (
-    <div className="min-h-screen bg-stone-50 text-stone-900 font-sans selection:bg-[#800000] selection:text-white flex flex-col justify-between">
-      <Navbar />
-      <main className="flex-1">
-        <FaqSection />
-      </main>
-      <Footer />
-    </div>
-  );
+  return <FaqSection />;
 }

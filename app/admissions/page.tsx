@@ -1,15 +1,10 @@
-import Navbar from "@/src/components/Navbar";
-import Footer from "@/src/components/Footer";
 import Admissions from "@/src/widgets/Admissions/Admissions";
 
+export const metadata = {
+  title: "Admissions 2026–27 | Vasant Valley School",
+  description: "Official admissions portal for Foundation, Class 1-7, and Class 11 (AS Levels) at Vasant Valley School.",
+};
+
 export default function AdmissionsPage() {
-  return (
-    <div className="min-h-screen bg-stone-50 text-stone-900 font-sans selection:bg-[#800000] selection:text-white flex flex-col justify-between">
-      <Navbar />
-      <main className="flex-1">
-        <Admissions />
-      </main>
-      <Footer />
-    </div>
-  );
+  return <Admissions />;
 }

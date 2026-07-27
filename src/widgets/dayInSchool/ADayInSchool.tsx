@@ -6,18 +6,17 @@ import PageHero from "@/src/components/PageHero";
 export default function ADayInSchool() {
   return (
     <div className="w-full font-sans bg-[#FBF9F5] text-stone-900 selection:bg-[#800000] selection:text-white">
-      
       <PageHero
-        badge="VASANT VALLEY CAMPUS LIFE"
+        badge="STUDENT LIFE & EXPERIENCE"
         title="A Day in School"
-        description="An invigorating and dynamic learning experience, both inside and outside the classroom."
-        backgroundImage="/a-day-banner.jpg"
+        description="Every school day comprises structured academic blocks, co-curricular learning, domain activities, and nutritious meals across an energetic 8-acre campus."
+        backgroundImage="/a-day-in-school-banner.jpg"
       />
 
-      <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 lg:py-20 space-y-16">
+      <section className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 py-16 lg:py-24 space-y-16">
         
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          <div className="lg:col-span-7 space-y-6">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <div className="lg:col-span-6 space-y-6">
             <div className="flex items-center gap-3">
               <span className="w-8 h-[2.5px] bg-[#800000]"></span>
               <span className="text-[#800000] text-xs font-extrabold tracking-widest uppercase">
@@ -25,28 +24,28 @@ export default function ADayInSchool() {
               </span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-serif leading-tight text-stone-900">
-              Invigorating, Dynamic & Social
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-serif font-bold text-stone-900 leading-tight">
+              A Classroom Without Boundaries
             </h2>
 
-            <p className="text-stone-700 text-sm sm:text-base leading-relaxed">
-              A typical day in Vasant Valley School involves an invigorating and dynamic learning experience, both inside and outside the classroom.
+            <p className="text-stone-700 text-sm sm:text-base leading-relaxed font-normal">
+              The school day comprises academic and nonacademic Learning Experiences and is planned with special focus on the developmental needs of our students. The entire Campus is a &ldquo;Classroom&rdquo; and learning is continuous.
             </p>
 
-            <div className="bg-white p-6 rounded-2xl border-l-4 border-[#800000] shadow-sm space-y-2">
-              <h3 className="text-base font-bold text-stone-900 font-serif">Classroom Alcoves & Social Hubs</h3>
-              <p className="text-xs text-stone-600 leading-relaxed">
-                Every year group is divided into three sections with about 30 students each. The classrooms are built around an alcove which is the hub of social interaction for the children.
+            <div className="bg-[#FAF5EE] p-5 rounded-2xl border border-amber-200/80 space-y-2 text-xs">
+              <span className="font-bold text-[#800000] uppercase tracking-wider block">Student Strength & Ratios:</span>
+              <p className="text-stone-600 leading-relaxed">
+                The student strength in each class varies from 18 to 30. Individualized attention for each student is a pillar of our educational philosophy.
               </p>
             </div>
           </div>
 
-          <div className="lg:col-span-5 grid grid-cols-2 gap-4">
+          <div className="lg:col-span-6 grid grid-cols-2 gap-4">
             <div className="bg-white p-6 rounded-2xl border border-stone-200 shadow-md space-y-2 text-center">
               <div className="w-12 h-12 mx-auto rounded-full bg-red-100 text-[#800000] flex items-center justify-center text-xl font-bold font-serif">
-                30
+                18-30
               </div>
-              <h4 className="text-xs font-bold uppercase tracking-wider text-stone-900">Students Per Section</h4>
+              <h4 className="text-xs font-bold uppercase tracking-wider text-stone-900">Students Per Class</h4>
               <p className="text-[11px] text-stone-500">Ensuring personalized teacher guidance.</p>
             </div>
 
@@ -59,7 +58,11 @@ export default function ADayInSchool() {
             </div>
 
             <div className="col-span-2 bg-[#FAF5EE] p-6 rounded-2xl border border-amber-200 text-center space-y-2">
-              <div className="text-2xl">🎵</div>
+              <div className="w-10 h-10 mx-auto rounded-full bg-red-100/80 text-[#800000] flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
+                </svg>
+              </div>
               <h4 className="text-xs font-bold uppercase tracking-wider text-[#800000]">No Bells, Just Music!</h4>
               <p className="text-xs text-stone-600">
                 You will know that it&apos;s break time in school when you hear music playing in the corridors.
@@ -142,8 +145,11 @@ export default function ADayInSchool() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="space-y-3 bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200">
-              <div className="w-10 h-10 rounded-full bg-red-100 text-[#800000] flex items-center justify-center text-lg">
-                ⏱️
+              <div className="w-10 h-10 rounded-full bg-red-100 text-[#800000] flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <circle cx="12" cy="12" r="9" strokeWidth={1.8} />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 6v6l4 2" />
+                </svg>
               </div>
               <h3 className="text-base font-bold text-stone-900 font-serif">Flexible Lesson Duration</h3>
               <p className="text-xs text-stone-600 leading-relaxed">
@@ -152,8 +158,10 @@ export default function ADayInSchool() {
             </div>
 
             <div className="space-y-3 bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200">
-              <div className="w-10 h-10 rounded-full bg-red-100 text-[#800000] flex items-center justify-center text-lg">
-                🍱
+              <div className="w-10 h-10 rounded-full bg-red-100 text-[#800000] flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 8v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                </svg>
               </div>
               <h3 className="text-base font-bold text-stone-900 font-serif">Three Nutritious Breaks</h3>
               <p className="text-xs text-stone-600 leading-relaxed">
@@ -162,8 +170,10 @@ export default function ADayInSchool() {
             </div>
 
             <div className="space-y-3 bg-[#FAF8F5] p-6 rounded-2xl border border-stone-200">
-              <div className="w-10 h-10 rounded-full bg-red-100 text-[#800000] flex items-center justify-center text-lg">
-                ⚽
+              <div className="w-10 h-10 rounded-full bg-red-100 text-[#800000] flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                </svg>
               </div>
               <h3 className="text-base font-bold text-stone-900 font-serif">After-School Extension Camps</h3>
               <p className="text-xs text-stone-600 leading-relaxed">
@@ -174,7 +184,6 @@ export default function ADayInSchool() {
         </div>
 
       </section>
-
     </div>
   );
 }

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Button from "@/src/components/Button";
 
 export default function PhilosophySection() {
   return (
@@ -36,18 +37,14 @@ export default function PhilosophySection() {
             </p>
 
             <div className="pt-2">
-              <a
-                href="/about-us#vision"
-                className="inline-flex items-center gap-2 bg-[#800000] hover:bg-[#660000] text-white px-7 py-3 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"
-              >
-                <span>&rarr; VISION</span>
-              </a>
+              <Button href="/about-us/vision" variant="primary">
+                <span>VISION</span>
+              </Button>
             </div>
           </div>
 
           <div className="lg:col-span-6 relative">
-
-            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-stone-900 border-4 border-white ">
+            <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl bg-stone-900 border-4 border-white">
               <div className="relative aspect-[16/10] bg-stone-800">
                 <Image
                   src="/our-philosphy.png"

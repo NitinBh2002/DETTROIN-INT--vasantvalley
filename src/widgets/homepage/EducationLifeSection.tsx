@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Button from "@/src/components/Button";
 
 export default function EducationLifeSection() {
   return (
@@ -12,7 +13,9 @@ export default function EducationLifeSection() {
           <div className="lg:col-span-6 space-y-6">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-xl bg-red-100/80 text-[#800000] flex items-center justify-center font-bold text-sm">
-                ☀️
+                <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
               </div>
               <span className="text-[#800000] text-xs font-extrabold tracking-widest uppercase">
                 LIFE AT VASANT VALLEY
@@ -29,13 +32,10 @@ export default function EducationLifeSection() {
             </p>
 
             <div className="pt-4">
-              <a
-                href="/a-day-in-school"
-                className="inline-flex items-center gap-3 bg-[#800000] hover:bg-[#660000] text-white px-8 py-4 rounded-full text-xs font-extrabold uppercase tracking-widest shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 group"
-              >
+              <Button href="/a-day-in-school" variant="primary">
                 <span>A DAY IN SCHOOL</span>
-                <span className="text-amber-300 group-hover:translate-x-1 transition-transform">&rarr;</span>
-              </a>
+                <span>&rarr;</span>
+              </Button>
             </div>
           </div>
 
@@ -58,12 +58,10 @@ export default function EducationLifeSection() {
                 </div>
                 <h3 className="text-lg font-serif font-bold">Continuous Learning & Campus Life</h3>
                 <p className="text-xs text-stone-200 font-light">
-                  From morning assembly alcoves to music-filled corridor breaks and after-school sports camps.
+                  Divided into structured blocks with breaks, fostering active social interaction and experiential learning.
                 </p>
               </div>
             </div>
-
-            <div className="absolute -bottom-6 -left-6 w-32 h-32 rounded-full bg-amber-200/50 -z-10 blur-2xl"></div>
           </div>
 
         </div>

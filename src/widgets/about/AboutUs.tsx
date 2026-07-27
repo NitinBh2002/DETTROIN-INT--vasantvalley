@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import PageHero from "@/src/components/PageHero";
+import Button from "@/src/components/Button";
 
 interface LeaderCard {
   name: string;
@@ -151,13 +152,21 @@ export default function AboutUs() {
 
             <div className="grid grid-cols-2 gap-4 pt-4">
               <div className="bg-white p-5 rounded-2xl border border-stone-200/80 shadow-sm space-y-1.5">
-                <div className="text-2xl">🎨</div>
+                <div className="w-10 h-10 rounded-full bg-red-50 text-[#800000] flex items-center justify-center">
+                  <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
+                  </svg>
+                </div>
                 <h3 className="text-sm font-bold text-stone-900">Arts & Culture</h3>
                 <p className="text-xs text-stone-600">Equally emphasized alongside academic learning.</p>
               </div>
 
               <div className="bg-white p-5 rounded-2xl border border-stone-200/80 shadow-sm space-y-1.5">
-                <div className="text-2xl">🏆</div>
+                <div className="w-10 h-10 rounded-full bg-red-50 text-[#800000] flex items-center justify-center">
+                  <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" />
+                  </svg>
+                </div>
                 <h3 className="text-sm font-bold text-stone-900">Sports & Fitness</h3>
                 <p className="text-xs text-stone-600">Building team character and physical agility.</p>
               </div>
@@ -343,18 +352,12 @@ export default function AboutUs() {
             Discover admissions, interactive campus tours, and opportunities to excel at Vasant Valley School.
           </p>
           <div className="pt-2 flex flex-wrap justify-center gap-4">
-            <a
-              href="/admissions"
-              className="bg-white text-[#800000] hover:bg-amber-100 px-7 py-3 rounded-full text-xs font-extrabold uppercase tracking-wider shadow-lg transition-all"
-            >
+            <Button href="/admissions" variant="white">
               Admissions Portal
-            </a>
-            <a
-              href="/contact"
-              className="border border-white/40 hover:border-white text-white px-7 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all"
-            >
+            </Button>
+            <Button href="/contact" variant="darkOutline">
               Connect with Us
-            </a>
+            </Button>
           </div>
         </div>
       </section>

@@ -2,6 +2,7 @@
 
 import React from "react";
 import Slider from "@/src/components/Slider";
+import Button from "@/src/components/Button";
 
 interface AnnouncementItem {
   id: string;
@@ -182,9 +183,9 @@ export default function Announcement() {
         </Slider>
 
         <div className="flex justify-center mt-10">
-          <button className="bg-[#7A0016] hover:bg-[#600010] text-white px-8 py-3.5 rounded-md text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200 cursor-pointer">
+          <Button href="/announcements" variant="primary">
             VIEW ALL ANNOUNCEMENTS
-          </button>
+          </Button>
         </div>
       </div>
     </section>

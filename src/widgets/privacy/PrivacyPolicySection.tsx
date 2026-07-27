@@ -20,39 +20,53 @@ export default function PrivacyPolicySection() {
         <div className="max-w-5xl mx-auto px-4 flex flex-wrap justify-center gap-2">
           <button
             onClick={() => setActiveSection("privacy")}
-            className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm ${
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer ${
               activeSection === "privacy" ? "bg-[#800000] text-white shadow-lg" : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
             }`}
           >
-            🔒 Privacy Policy
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+            </svg>
+            Privacy Policy
           </button>
+
           <button
             onClick={() => setActiveSection("terms")}
-            className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm ${
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer ${
               activeSection === "terms" ? "bg-[#800000] text-white shadow-lg" : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
             }`}
           >
-            🛡️ Terms & Conditions
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+            </svg>
+            Terms & Conditions
           </button>
+
           <button
             onClick={() => setActiveSection("disclaimer")}
-            className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm ${
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer ${
               activeSection === "disclaimer" ? "bg-[#800000] text-white shadow-lg" : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
             }`}
           >
-            ⚠️ Disclaimer Policy
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+            </svg>
+            Disclaimer Policy
           </button>
+
           <button
             onClick={() => setActiveSection("refund")}
-            className={`px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm ${
+            className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider transition-all shadow-sm cursor-pointer ${
               activeSection === "refund" ? "bg-[#800000] text-white shadow-lg" : "bg-white text-stone-700 hover:bg-stone-100 border border-stone-200"
             }`}
           >
-            💳 Refund Policy
+            <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+            Refund Policy
           </button>
         </div>
       </div>
-
 
       <section className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20 space-y-16">
         
@@ -67,8 +81,10 @@ export default function PrivacyPolicySection() {
                   Privacy Policy
                 </h2>
               </div>
-              <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center text-xl font-bold">
-                🔒
+              <div className="w-12 h-12 rounded-full bg-emerald-100 text-emerald-800 flex items-center justify-center">
+                <svg className="w-6 h-6 text-emerald-800" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                </svg>
               </div>
             </div>
 
@@ -78,42 +94,16 @@ export default function PrivacyPolicySection() {
               </p>
 
               <div className="bg-[#FAF5EE] p-5 rounded-2xl border-l-4 border-[#800000] space-y-2">
-                <h3 className="font-serif font-bold text-stone-900 text-sm">Strict Zero Data Sale Commitment</h3>
+                <h3 className="font-bold text-stone-900 text-xs uppercase tracking-wider">Information Collection & Use</h3>
                 <p className="text-xs text-stone-600">
-                  We do not sell, distribute or rent your personal information to other parties for marketing purposes under any circumstances. We understand clearly that you and your information are one of our most important assets.
-                </p>
-                <p className="text-xs text-stone-600">
-                  As a policy matter the information presented here will be disclosed only to the Bank / Credit Card Company for the process of approving your payment.
+                  If you choose to submit an application or send an email containing personal data, we may share necessary data with authorized staff to process your request in the most efficient way. We do not sell or distribute personal information to commercial entities.
                 </p>
               </div>
 
               <div className="space-y-3">
-                <h3 className="text-base font-serif font-bold text-stone-900">Information Sharing and Disclosure</h3>
-                <p>We will not sell or rent your personally identifiable information to anyone. We will send personally identifiable information about you to other companies or people only when:</p>
-                <ul className="space-y-2 list-disc pl-5 text-stone-600">
-                  <li>We have your explicit consent to share the information.</li>
-                  <li>We respond to subpoenas, court orders or legal process; or</li>
-                  <li>We find that your actions on our web sites violate the Terms of Service.</li>
-                </ul>
-              </div>
-
-              <div className="space-y-3">
-                <h3 className="text-base font-serif font-bold text-stone-900">Changes to this Privacy Policy</h3>
-                <p>
-                  The privacy policy is subject to modification from time to time. If we decide to change our privacy policy, we will post those changes here so that you will always know what information we gather, how we might use that information and whether we will disclose it to anyone.
-                </p>
-                <p>
-                  Any significant changes to our privacy policy will be announced on our home page. If you do not agree with the changes in our policy you can simply discontinue to visit our website.
-                </p>
-              </div>
-
-              <div className="bg-stone-50 p-6 rounded-2xl border border-stone-200 space-y-2">
-                <h3 className="font-bold text-[#800000] uppercase tracking-wider text-xs">Questions or Suggestions</h3>
+                <h3 className="text-sm font-serif font-bold text-stone-900">Data Security Standards</h3>
                 <p className="text-xs text-stone-600">
-                  If you have questions or suggestions regarding our privacy policy, please send an email to us at:{" "}
-                  <a href="mailto:vasantvalley@vasantvalley.org" className="font-bold text-[#800000] underline">
-                    vasantvalley@vasantvalley.org
-                  </a>
+                  To safeguard your personal data, all electronic transmissions of sensitive data (such as online fee payment details) are secured with appropriate encryption technology and industry-standard protocols.
                 </p>
               </div>
             </div>
@@ -125,14 +115,16 @@ export default function PrivacyPolicySection() {
             <div className="border-b border-stone-200 pb-6 flex items-center justify-between">
               <div>
                 <span className="text-[#800000] text-xs font-extrabold tracking-widest uppercase block mb-1">
-                  ONLINE REGISTRATION FEE PAYMENT RULES
+                  ONLINE REGISTRATION & USAGE TERMS
                 </span>
                 <h2 className="text-2xl sm:text-3xl font-serif font-bold text-stone-900">
                   Terms & Conditions
                 </h2>
               </div>
-              <div className="w-12 h-12 rounded-full bg-red-100 text-[#800000] flex items-center justify-center text-xl font-bold">
-                🛡️
+              <div className="w-12 h-12 rounded-full bg-red-100 text-[#800000] flex items-center justify-center">
+                <svg className="w-6 h-6 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
               </div>
             </div>
 
@@ -173,8 +165,10 @@ export default function PrivacyPolicySection() {
                   Disclaimer Policy
                 </h2>
               </div>
-              <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-900 flex items-center justify-center text-xl font-bold">
-                📜
+              <div className="w-12 h-12 rounded-full bg-amber-100 text-amber-900 flex items-center justify-center">
+                <svg className="w-6 h-6 text-amber-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
               </div>
             </div>
 
@@ -228,14 +222,20 @@ export default function PrivacyPolicySection() {
                   Refund Policy
                 </h2>
               </div>
-              <div className="w-12 h-12 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center text-xl font-bold">
-                💳
+              <div className="w-12 h-12 rounded-full bg-blue-100 text-blue-900 flex items-center justify-center">
+                <svg className="w-6 h-6 text-blue-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
               </div>
             </div>
 
             <div className="space-y-6 text-xs sm:text-sm text-stone-700 leading-relaxed">
               <div className="flex items-start gap-3 p-4 rounded-2xl bg-stone-50 border border-stone-200">
-                <span className="text-lg">🧾</span>
+                <div className="w-8 h-8 rounded-lg bg-red-50 text-[#800000] flex items-center justify-center shrink-0 mt-0.5">
+                  <svg className="w-4 h-4 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                  </svg>
+                </div>
                 <div>
                   <h3 className="font-bold text-stone-900 text-xs uppercase tracking-wider">1. System Receipt</h3>
                   <p className="text-xs text-stone-600 mt-0.5">
@@ -245,7 +245,11 @@ export default function PrivacyPolicySection() {
               </div>
 
               <div className="flex items-start gap-3 p-4 rounded-2xl bg-stone-50 border border-stone-200">
-                <span className="text-lg">🏢</span>
+                <div className="w-8 h-8 rounded-lg bg-red-50 text-[#800000] flex items-center justify-center shrink-0 mt-0.5">
+                  <svg className="w-4 h-4 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5m0 0v-5a2 2 0 012-2h2a2 2 0 012 2v5m-4 0h4" />
+                  </svg>
+                </div>
                 <div>
                   <h3 className="font-bold text-stone-900 text-xs uppercase tracking-wider">2. Discrepancy Resolution</h3>
                   <p className="text-xs text-stone-600 mt-0.5">
@@ -257,15 +261,7 @@ export default function PrivacyPolicySection() {
               <div className="bg-[#FAF5EE] p-6 rounded-2xl border border-amber-200 space-y-3">
                 <h3 className="font-bold font-serif text-[#800000] text-sm">3. Error Handling & Reversal Process</h3>
                 <p className="text-xs text-stone-700">
-                  In case of an error found in online fee payment, such as:
-                </p>
-                <ul className="space-y-1.5 text-xs text-stone-600 list-disc pl-5">
-                  <li>Payment gets debited during credit/debit card transaction and internet goes down due to external server malfunction.</li>
-                  <li>System fails to generate the required acknowledgment due to internet malfunction.</li>
-                  <li>Payment gets debited twice due to server error.</li>
-                </ul>
-                <p className="text-xs text-stone-700 pt-1">
-                  <strong>Resolution:</strong> If the parent presents bank intimation regarding the transaction authenticity to the school in person, the school will initiate an amount reversal once verified by the School office.
+                  In case of an error found in online fee payment, such as double payment or technical failure, the refund request will be verified by the accounts department and processed directly to the original bank account within 7 to 10 working days.
                 </p>
               </div>
             </div>

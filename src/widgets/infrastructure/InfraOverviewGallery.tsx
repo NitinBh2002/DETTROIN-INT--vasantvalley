@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 
 interface GalleryPhoto {
   id: string;
@@ -108,7 +109,12 @@ export default function InfraOverviewGallery() {
             </div>
 
             <div className="col-span-2 bg-white p-6 rounded-2xl border border-stone-200 shadow-md text-center space-y-2">
-              <div className="text-2xl">♿</div>
+              <div className="w-10 h-10 mx-auto rounded-full bg-red-50 text-[#800000] flex items-center justify-center">
+                <svg className="w-5 h-5 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <circle cx="12" cy="4" r="2" strokeWidth={1.8} />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.8} d="M12 7v5m0 0l3 5m-3-5L9 17m3-10h4M12 7H8" />
+                </svg>
+              </div>
               <h3 className="text-xs font-bold uppercase tracking-wider text-stone-900">Challenge Compliant</h3>
               <p className="text-xs text-stone-600">
                 100% accessible ramps, elevators, and supportive facilities across all academic blocks.
@@ -151,10 +157,12 @@ export default function InfraOverviewGallery() {
                 key={photo.id}
                 className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 border border-stone-200 aspect-[4/3] bg-stone-900"
               >
-                <img
+                <Image
                   src={photo.image}
                   alt={photo.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-700 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent"></div>
                 <div className="absolute bottom-4 left-4 right-4 text-white space-y-1">

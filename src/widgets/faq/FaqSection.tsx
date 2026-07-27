@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import PageHero from "@/src/components/PageHero";
+import Button from "@/src/components/Button";
 
 interface FaqItem {
   id: string;
@@ -276,7 +277,11 @@ export default function FaqSection() {
       <div className="bg-[#FAF5EE] py-6 border-b border-stone-200">
         <div className="max-w-xl mx-auto px-4">
           <div className="relative flex items-center bg-white rounded-full p-2 shadow-md border border-stone-200">
-            <span className="pl-4 text-stone-400">🔍</span>
+            <span className="pl-4 text-stone-400">
+              <svg className="w-4 h-4 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </span>
             <input
               type="text"
               value={searchQuery}
@@ -317,7 +322,11 @@ export default function FaqSection() {
         <div className="space-y-4">
           {filteredFaqs.length === 0 ? (
             <div className="bg-white rounded-3xl p-12 text-center border border-stone-200 space-y-3">
-              <div className="text-3xl">🔍</div>
+              <div className="w-12 h-12 rounded-full bg-red-50 text-[#800000] mx-auto flex items-center justify-center">
+                <svg className="w-6 h-6 text-[#800000]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
               <h3 className="text-lg font-bold font-serif text-stone-900">No Matching Questions Found</h3>
               <p className="text-xs text-stone-500 max-w-md mx-auto">
                 We couldn&apos;t find any FAQs matching your search query &quot;{searchQuery}&quot;. Please try searching with different keywords or contact the school desk.
@@ -380,12 +389,9 @@ export default function FaqSection() {
           </div>
 
           <div className="flex items-center gap-3">
-            <a
-              href="/contact"
-              className="bg-[#800000] hover:bg-[#660000] text-white px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all"
-            >
+            <Button href="/contact" variant="primary">
               Contact School Office
-            </a>
+            </Button>
           </div>
         </div>
 

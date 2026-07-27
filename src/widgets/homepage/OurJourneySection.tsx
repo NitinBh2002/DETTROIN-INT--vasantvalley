@@ -1,13 +1,15 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
+import Button from "@/src/components/Button";
 
 export default function OurJourneySection() {
   return (
     <section className="w-full bg-white text-stone-900 py-16 lg:py-24 relative overflow-hidden font-sans border-t border-stone-100">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-12 items-center">
-          
+
           <div className="lg:col-span-5 flex justify-center lg:justify-start relative">
             <div className="absolute -left-6 -top-6 w-20 h-20 grid grid-cols-5 gap-1.5 opacity-25 pointer-events-none">
               {Array.from({ length: 20 }).map((_, i) => (
@@ -65,12 +67,9 @@ export default function OurJourneySection() {
             </div>
 
             <div className="pt-2">
-              <a
-                href="#about"
-                className="inline-flex items-center gap-2 bg-[#800000] hover:bg-[#660000] text-white px-7 py-3 rounded-full text-xs font-bold uppercase tracking-wider shadow-md hover:shadow-lg transition-all duration-200 transform hover:-translate-y-0.5"
-              >
+              <Button href="/about-us" variant="primary">
                 <span>&rarr; ABOUT US</span>
-              </a>
+              </Button>
             </div>
           </div>
 
@@ -78,10 +77,12 @@ export default function OurJourneySection() {
       </div>
 
       <div className="absolute right-0 top-0 bottom-0 w-1/3 pointer-events-none opacity-[0.08] hidden xl:block">
-        <img
-          src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=1000&auto=format&fit=crop"
+        <Image
+          src="/learning-banner-1.jpg"
           alt="Historic Campus Background"
-          className="w-full h-full object-cover filter grayscale"
+          fill
+          sizes="33vw"
+          className="object-cover filter grayscale"
         />
       </div>
     </section>
